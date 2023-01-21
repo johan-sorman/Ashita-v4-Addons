@@ -1,6 +1,6 @@
 addon.name      = 'luopantime';
 addon.author    = 'GetAwayCoxn';
-addon.version   = '1.0';
+addon.version   = '1.0 (GetAwayCoxn), 1.0.1 (Sampi, added Pet HPP values)';
 addon.desc      = 'Light weight count down timer for Luopans';
 addon.link      = 'https://github.com/GetAwayCoxn/Ashita-v4-Addons';
 
@@ -64,7 +64,7 @@ ashita.events.register('d3d_present', 'present_cb', function ()
     end
 
     if casttime ~= nil then
-        output = output .. '  ' .. remaining(casttime);
+        output = output .. '  ' .. remaining(casttime) .. '\nLuopan HP:      ' .. petHP ..'%';
     end
 
     display.text = output;
